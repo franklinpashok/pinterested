@@ -7,13 +7,14 @@ end
 gem 'rails', '~> 5.1.7'
 gem 'sqlite3', '=1.3.13'
 gem 'puma', '~> 3.7'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '>= 3.2'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0'
+gem 'devise', '~> 4.6', '>= 4.6.2'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -27,6 +28,8 @@ group :development, :test do
   gem 'capybara', '= 2.15'
   gem 'selenium-webdriver'
   gem 'sqlite3', '=1.3.13'
+  gem 'bootstrap-sass'
+  gem 'sprockets'
 end
 
 group :production do
