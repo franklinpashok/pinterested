@@ -3,15 +3,13 @@
     <div class="navbar-header">
     <%= link_to 'Pinterested', root_path, class: "navbar-brand" %>
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <div class="nav navbar-default nav navbar">   
     <ul class="nav navbar-nav navbar-right">
-      <li class="nav-item active">
-        <%= link_to 'Home', home_home_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item active">
-        <%= link_to 'About Me', home_about_path, class: "nav-link" %>
-      </li>
+      <li> <%= link_to 'Home', home_home_path, class: "nav-link active" %> </li>
+      <li> <%= link_to 'About Me', home_about_path, class: "nav-link" %> </li>
+      <li> <%= link_to "Sign in", new_user_session_path, class: "nav-link" %></li>
+      <li> <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %></li>
     </ul>
-  </div><!-- /.navbar-collapse -->
+  </div>
 </div><!-- /.container-fluid -->
 </nav>
