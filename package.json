@@ -1,5 +1,5 @@
 {
   "name": "pintrested",
   "private": true,
-  "dependencies": {}
+  "engines": {"node": "10.15.3"}
 }
