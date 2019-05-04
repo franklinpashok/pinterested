@@ -1,15 +1,29 @@
-<nav class="navbar navbar-default navbar-dark bg-dark" role="navigation">
+<nav class="navbar navbar-default bg-dark" role="navigation">
   <div class="container">
     <div class="navbar-header">
     <%= link_to 'Pinterested', root_path, class: "navbar-brand" %>
     </div>
-  <div class="nav navbar-brand">   
-    <ul class="nav navbar navbar-right">
-      <li> <%= link_to 'Home', home_home_path, class: "nav-link" %> </li>
-      <li> <%= link_to 'About Me', home_about_path, class: "nav-link" %> </li>
-      <li> <%= link_to "Sign in", new_user_session_path, class: "nav-link" %></li>
-      <li> <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %></li>
+    <div class="navbar-default"> 
+      <ul class="nav navbar navbar-right">
+      <% if user_signed_in? %>
+<li> <%= link_to 'Home', home_home_path, class: "nav-link" %> </li>
+<li> <%= link_to 'About Me', home_about_path, class: "nav-link" %> </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Account Settings</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<%= link_to "Edit Account",  edit_user_registration_path, class: "nav-link" %>
+          <div class="dropdown-divider"></div>
+<%= link_to "Sign out", destroy_user_session_path, class: "nav-link", method: :delete %>
+        </div>
+      </li>
+      <% else %>
+<li> <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %></li>
+<li> <%= link_to "Sign in", new_user_session_path, class: "nav-link" %></li>
+      <% end %>
+      
+      
     </ul>
   </div>
-</div><!-- /.container-fluid -->
+</div>
 </nav>
